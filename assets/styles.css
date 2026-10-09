@@ -106,12 +106,13 @@ button:focus-visible, input:focus-visible { outline: 3px solid #a46f13; outline-
 .plugin-note strong { flex-shrink: 0; }
 .plugin-note p { color: var(--muted); margin-bottom: 0; }
 .site-footer { background: var(--green-dark); color: white; }
-.footer-inner { display: flex; align-items: center; justify-content: space-between; gap: 24px; padding-block: 30px; font-size: 12px; }
+.footer-inner { display: grid; grid-template-columns: auto minmax(0, 1fr) auto; align-items: center; gap: 24px; padding-block: 30px; font-size: 14px; }
 .footer-inner p { margin: 0; }
-.footer-inner p:first-child { color: white; font-weight: 650; font-size: 14px; }
-.footer-inner a { color: inherit; }
-.creator-credit { display: block; margin-top: 5px; font-size: 18px; font-weight: 400; color: inherit; }
-.copyright-notice { display: block; margin-top: 8px; font-size: 12px; color: inherit; }
+.footer-brand > p { font-weight: 650; }
+.footer-inner a { color: inherit; justify-self: end; }
+.creator-credit { display: block; margin-top: 5px; font-size: inherit; font-weight: 400; color: inherit; }
+.footer-message { text-align: center; }
+.footer-message .copyright-notice { margin-top: 5px; font-size: inherit; color: inherit; }
 .lesson-layout { display: grid; grid-template-columns: 238px minmax(0, 1fr); gap: 64px; padding-block: 42px 65px; }
 .lesson-sidebar { align-self: start; position: sticky; top: 24px; }
 .back-link { display: inline-block; font-size: 13px; text-decoration: none; margin-bottom: 28px; }
@@ -217,7 +218,9 @@ td { color: var(--muted); }
   .card-bottom > span:first-child { font-size: 12px; }
   .learning-guide { grid-template-columns: 1fr; gap: 22px; padding-block: 42px 20px; }
   .plugin-note { flex-direction: column; gap: 4px; padding: 16px 18px; margin-bottom: 38px; }
-  .footer-inner { flex-direction: column; align-items: flex-start; gap: 10px; padding-block: 24px; }
+  .footer-inner { grid-template-columns: 1fr; justify-items: start; gap: 16px; padding-block: 24px; }
+  .footer-message { text-align: left; }
+  .footer-inner a { justify-self: start; }
   .lesson-layout { display: flex; flex-direction: column; gap: 25px; padding-block: 25px 40px; }
   .lesson-sidebar { position: static; width: 100%; }
   .lesson-sidebar .back-link { margin-bottom: 18px; }
