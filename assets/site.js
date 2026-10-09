@@ -19,6 +19,26 @@ for (const panel of document.querySelectorAll("[data-plugin]")) {
   link.href = url.href;
   link.hidden = false;
   status.hidden = true;
+
+  const copy = panel.querySelector("[data-plugin-copy]");
+  if (copy) {
+    const field = panel.querySelector("[data-plugin-url]");
+    const feedback = panel.querySelector("[data-copy-status]");
+    field.value = url.href;
+    copy.hidden = false;
+    copy.addEventListener("click", async () => {
+      try {
+        await navigator.clipboard.writeText(url.href);
+        field.hidden = true;
+        feedback.textContent = "已複製，可貼到 ChatGPT 對話框。";
+      } catch {
+        field.hidden = false;
+        field.focus();
+        field.select();
+        feedback.textContent = "請手動複製已選取的完整網址。";
+      }
+    });
+  }
 }
 
 const note = document.querySelector(".plugin-note");
@@ -30,7 +50,7 @@ if (note) {
   }).length;
   if (ready === cards.length && ready > 0) {
     note.querySelector("strong").textContent = "八個外掛入口已加入";
-    note.querySelector("p").textContent = "各單元可開啟對應的 Google Drive 分享檔案；請依檔案說明使用外掛，存取權限由檔案擁有者設定。";
+    note.querySelector("p").textContent = "各單元可下載對應的 Google Drive 分享檔案；第一次使用請先閱讀下載與安裝指南，存取權限由檔案擁有者設定。";
   } else if (ready > 0) {
     note.querySelector("strong").textContent = `已加入 ${ready} / ${cards.length} 個外掛入口`;
     note.querySelector("p").textContent = "教材皆可閱讀；已加入分享網址的單元會顯示外掛入口，其餘入口仍在準備中。";
