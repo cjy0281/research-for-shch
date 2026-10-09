@@ -25,7 +25,7 @@ h1, h2, h3 { line-height: 1.4; }
 .header-inner { min-height: 98px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
 .brand { display: flex; align-items: center; gap: 12px; color: var(--ink); font-size: 19px; font-weight: 750; text-decoration: none; line-height: 1.5; }
 .brand-mark { display: grid; place-items: center; flex-shrink: 0; width: 43px; height: 43px; background: var(--green); color: var(--paper); font-family: serif; font-size: 25px; border-radius: 12px; }
-.brand small { display: block; font-size: 11px; letter-spacing: .08em; font-weight: 500; color: var(--muted); }
+.brand small { display: block; font-size: 16.5px; letter-spacing: .08em; font-weight: 500; color: var(--muted); }
 .header-link { font-size: 14px; font-weight: 650; text-decoration: none; }
 .header-link span { margin-left: 12px; }
 .header-actions { display: flex; align-items: center; gap: 24px; }
@@ -105,12 +105,13 @@ button:focus-visible, input:focus-visible { outline: 3px solid #a46f13; outline-
 .plugin-note { display: flex; align-items: flex-start; gap: 20px; padding: 20px 24px; background: #f4efdf; border: 1px solid #e5dcc4; border-radius: 12px; margin-bottom: 65px; font-size: 13px; }
 .plugin-note strong { flex-shrink: 0; }
 .plugin-note p { color: var(--muted); margin-bottom: 0; }
-.site-footer { background: var(--green-dark); color: #d3e1d2; }
+.site-footer { background: var(--green-dark); color: white; }
 .footer-inner { display: flex; align-items: center; justify-content: space-between; gap: 24px; padding-block: 30px; font-size: 12px; }
 .footer-inner p { margin: 0; }
 .footer-inner p:first-child { color: white; font-weight: 650; font-size: 14px; }
-.footer-inner a { color: #d3e1d2; }
-.creator-credit { display: block; margin-top: 5px; font-size: 12px; font-weight: 400; color: #d3e1d2; }
+.footer-inner a { color: inherit; }
+.creator-credit { display: block; margin-top: 5px; font-size: 18px; font-weight: 400; color: inherit; }
+.copyright-notice { display: block; margin-top: 8px; font-size: 12px; color: inherit; }
 .lesson-layout { display: grid; grid-template-columns: 238px minmax(0, 1fr); gap: 64px; padding-block: 42px 65px; }
 .lesson-sidebar { align-self: start; position: sticky; top: 24px; }
 .back-link { display: inline-block; font-size: 13px; text-decoration: none; margin-bottom: 28px; }
@@ -187,7 +188,7 @@ td { color: var(--muted); }
   .header-inner { min-height: 83px; gap: 12px; padding-block: 16px; flex-wrap: wrap; }
   .brand { font-size: 16px; gap: 9px; flex-basis: 100%; }
   .brand-mark { width: 37px; height: 37px; font-size: 23px; }
-  .brand small { font-size: 9px; letter-spacing: .01em; }
+  .brand small { font-size: 13.5px; letter-spacing: .01em; }
   .header-link { font-size: 11px; }
   .header-link span { margin-left: 3px; }
   .header-actions { flex-direction: row; align-items: center; gap: 22px; flex-shrink: 0; width: 100%; justify-content: flex-end; }
